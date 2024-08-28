@@ -130,7 +130,7 @@ public class Request implements Serializable {
     /**
      * The http method of the request. Get for default.
      * @return httpMethod
-     * @see HttpConstant.Method
+     * @see io.github.longxiaoyun.utils.HttpConstant.Method
      * @since 0.5.0
      */
     public String getMethod() {

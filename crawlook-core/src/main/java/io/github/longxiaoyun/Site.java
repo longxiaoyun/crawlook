@@ -29,7 +29,6 @@ public class Site {
     /**
      * 额外参数传递，便于扩展，类似scrapy的meta
      */
-//    private Map<String, Object> meta;
     private Meta meta;
 
     private int sleepTime = 5000;
@@ -273,7 +272,7 @@ public class Site {
      * Put an Http header for downloader. <br>
      * Use {@link #addCookie(String, String)} for cookie and {@link #setUserAgent(String)} for user-agent. <br>
      *
-     * @param key   key of http header, there are some keys constant in {@link HttpConstant.Header}
+     * @param key   key of http header, there are some keys constant in {@link io.github.longxiaoyun.utils.HttpConstant.Header}
      * @param value value of header
      * @return this
      */

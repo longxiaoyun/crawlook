@@ -18,5 +18,5 @@ public interface CollectorPipeline<T> extends Pipeline {
      *
      * @return collected results
      */
-    public List<T> getCollected();
+    List<T> getCollected();
 }

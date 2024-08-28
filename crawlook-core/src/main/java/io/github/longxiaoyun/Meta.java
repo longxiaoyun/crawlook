@@ -145,103 +145,212 @@ public class Meta extends ConcurrentHashMap<String, Object> {
         return (T) (result != null ? result : defaultValue);
     }
 
-    /** 获取string */
+    /**
+     * 获取string
+     * @param key 键
+     * @return 字段值
+     */
     public String getString(String key) {
         return get(key, null);
     }
-    /** 获取string,获取为空返回默认值 */
+    /**
+     * 获取string,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public String getString(String key, String defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取int */
+    /**
+     * 获取int
+     * @param key 键
+     * @return 字段值
+     */
     public Integer getInteger(String key) {
         return get(key, null);
     }
-    /** 获取int,获取为空返回默认值 */
+    /**
+     * 获取int,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public int getIntValue(String key, int defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取long */
+    /**
+     * 获取long
+     * @param key 键
+     * @return 字段值
+     */
     public Long getLong(String key) {
         return get(key, null);
     }
-    /** 获取long,获取为空返回默认值 */
+    /**
+     * 获取long,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public long getLongValue(String key, long defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取float */
+    /**
+     * 获取float
+     * @param key 键
+     * @return 字段值
+     */
     public Float getFloat(String key) {
         return get(key, null);
     }
-    /** 获取float,获取为空返回默认值 */
+    /**
+     * 获取float,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue  默认值
+     * @return 字段值
+     */
     public float getFloatValue(String key, float defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取short */
+    /**
+     * 获取short
+     * @param key 键
+     * @return 字段值
+     */
     public Short getShort(String key) {
         return get(key, null);
     }
-    /** 获取short,获取为空返回默认值 */
+    /**
+     * 获取short,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public short getShortValue(String key, short defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取double */
+    /**
+     * 获取double
+     * @param key 键
+     * @return 字段值
+     */
     public Double getDouble(String key) {
         return get(key, null);
     }
-    /** 获取double,获取为空返回默认值 */
+    /**
+     * 获取double,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public double getDoubleValue(String key, double defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取char */
+    /**
+     * 获取char
+     * @param key 键
+     * @return 字段值
+     */
     public Character getChar(String key) {
         return get(key, null);
     }
-    /** 获取char,获取为空返回默认值 */
+    /**
+     * 获取char,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public char getCharValue(String key, char defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取byte */
+    /**
+     * 获取byte
+     * @param key 键
+     * @return 字段值
+     */
     public Byte getByte(String key) {
         return get(key, null);
     }
-    /** 获取byte,获取为空返回默认值 */
+    /**
+     * 获取byte,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public byte getByteValue(String key, byte defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取boolean */
+    /**
+     * 获取boolean
+     * @param key 键
+     * @return 字段值
+     */
     public Boolean getBool(String key) {
         return get(key, null);
     }
-    /** 获取boolean,获取为空返回默认值 */
+    /**
+     * 获取boolean,获取为空返回默认值
+     * @param key 键
+     * @param defaultValue 默认值
+     * @return 字段值
+     */
     public boolean getBoolValue(String key, boolean defaultValue) {
         return get(key, defaultValue);
     }
-    /** 获取BigDecimal */
+    /**
+     * 获取BigDecimal
+     * @param key 键
+     * @return 字段值
+     */
     public BigDecimal getBigDecimal(String key) {
         return get(key, null);
     }
-    /** 获取BigInteger */
+    /**
+     *  获取BigInteger
+     * @param key 键
+     * @return 字段值
+     */
     public BigInteger getBigInteger(String key) {
         return get(key, null);
     }
-    /** 获取byte[] */
+    /**
+     * 获取byte[]
+     * @param key 键
+     * @return 字段值
+     */
     public byte[] getBytes(String key) {
         return get(key, null);
     }
-    /** 获取Date */
+    /**
+     * 获取Date
+     * @param key 键
+     * @return 字段值
+     */
     public Date getDate(String key) {
         return get(key, null);
     }
-    /** 获取Time */
+    /**
+     * 获取Time
+     * @param key 键
+     * @return 字段值
+     */
     public Time getTime(String key) {
         return get(key, null);
     }
-    /** 获取Timestamp */
+    /**
+     * 获取Timestamp
+     * @param key 键
+     * @return 字段值
+     */
     public Timestamp getTimestamp(String key) {
         return get(key, null);
     }
-    /** 获取Number */
+    /**
+     * 获取Number
+     * @param key 键
+     * @return 字段值
+     */
     public Number getNumber(String key) {
         return get(key, null);
     }
@@ -281,7 +390,12 @@ public class Meta extends ConcurrentHashMap<String, Object> {
         return super.equals(o);
     }
 
-    /** 自定义key */
+
+    /**
+     *  自定义key
+     * @param key   key
+     * @return key
+     */
     private String customKey(String key) {
         if (this.caseInsensitive && null != key) {
             key = key.toLowerCase();

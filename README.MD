@@ -8,7 +8,7 @@
 <dependency>
     <groupId>io.github.longxiaoyun</groupId>
     <artifactId>crawlook-core</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
 </dependency>
 ```
 
@@ -17,7 +17,7 @@
 <dependency>
     <groupId>io.github.longxiaoyun</groupId>
     <artifactId>crawlook-extension</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
 </dependency>
 ```
 
@@ -25,6 +25,10 @@
 
 ### 打包
 ```shell
-maven deploy
+# 父模块
+maven clean package deploy -N
+
+# 指定子模块
+maven clean package deploy -pl crawlook-core
 ```
 
