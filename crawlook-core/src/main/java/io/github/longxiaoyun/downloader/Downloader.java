@@ -27,5 +27,11 @@ public interface Downloader {
      * Tell the downloader how many threads the spider used.
      * @param threadNum number of threads
      */
-    void setThread(int threadNum);
+//    void setThread(int threadNum);
+
+    /**
+     * Downloader resource pool size, such as httpclient connection pool size, selenium browser pool size
+     * @param poolSize pool size
+     */
+    void connectPoolSize(int poolSize);
 }

@@ -47,12 +47,11 @@ public class WebDriverFactory implements PooledObjectFactory<WebDriver> {
         }
         if (driverType.equalsIgnoreCase(WebDriverEnum.CHROME.getDriver())) {
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.setHeadless(true);
+            chromeOptions.setHeadless(false);
             chromeOptions.setAcceptInsecureCerts(true);
             chromeOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
             chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
             chromeOptions.setExperimentalOption("excludeSwitches", Lists.newArrayList("enable-automation"));
-            chromeOptions.setExperimentalOption("useAutomationExtension", false);
             chromeOptions.addArguments("--disable-blink-features");
             chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
             chromeOptions.addArguments("--remote-allow-origins=*");
@@ -81,7 +80,6 @@ public class WebDriverFactory implements PooledObjectFactory<WebDriver> {
             chromeOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
             chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
             chromeOptions.setExperimentalOption("excludeSwitches", Lists.newArrayList("enable-automation"));
-            chromeOptions.setExperimentalOption("useAutomationExtension", false);
             chromeOptions.addArguments("--disable-blink-features");
             chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
             chromeOptions.addArguments("--remote-allow-origins=*");
@@ -98,7 +96,10 @@ public class WebDriverFactory implements PooledObjectFactory<WebDriver> {
      */
     @Override
     public void destroyObject(PooledObject<WebDriver> p) throws Exception {
-        p.getObject().quit();
+        WebDriver driver = p.getObject();
+        if (driver != null) {
+            driver.quit();
+        }
     }
     /**
      * 验证对象是否可用

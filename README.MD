@@ -8,7 +8,7 @@
 <dependency>
     <groupId>io.github.longxiaoyun</groupId>
     <artifactId>crawlook-core</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 </dependency>
 ```
 
@@ -17,7 +17,7 @@
 <dependency>
     <groupId>io.github.longxiaoyun</groupId>
     <artifactId>crawlook-extension</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 </dependency>
 ```
 

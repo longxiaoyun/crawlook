@@ -44,7 +44,7 @@ public class WebDriverPoolConfig {
         poolConfig.setTestOnReturn(true);
         poolConfig.setTestWhileIdle(true);
         // 定期检查并清除对象池中的空闲对象
-        poolConfig.setTimeBetweenEvictionRuns(Duration.ofMinutes(30L));
+        poolConfig.setTimeBetweenEvictionRuns(Duration.ofSeconds(30L));
         // 一定要关闭jmx，不然springboot启动会报已经注册了某个jmx的错误
         poolConfig.setJmxEnabled(false);
 

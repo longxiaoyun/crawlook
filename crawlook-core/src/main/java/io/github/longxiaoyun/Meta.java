@@ -11,6 +11,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * Meta对象，用于在spider中传递全局参数
  * @author longxiaoyun
  * @date 2024-08-21
  */

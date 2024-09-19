@@ -96,9 +96,13 @@ public class HttpClientDownloader extends AbstractDownloader {
         }
     }
 
+//    @Override
+//    public void setThread(int thread) {
+//        httpClientGenerator.setPoolSize(thread);
+//    }
     @Override
-    public void setThread(int thread) {
-        httpClientGenerator.setPoolSize(thread);
+    public void connectPoolSize(int poolSize) {
+        httpClientGenerator.setPoolSize(poolSize);
     }
 
     protected Page handleResponse(Request request, String charset, HttpResponse httpResponse, Task task) throws IOException {

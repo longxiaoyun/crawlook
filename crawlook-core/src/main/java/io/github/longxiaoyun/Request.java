@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.TypeReference;
 import io.github.longxiaoyun.downloader.Downloader;
 import io.github.longxiaoyun.model.HttpRequestBody;
 import io.github.longxiaoyun.utils.Experimental;
@@ -93,7 +95,9 @@ public class Request implements Serializable {
         if (extras == null) {
             return null;
         }
-        return (T) extras.get(key);
+        TypeReference<T> typeRef = new TypeReference<T>() {};
+//        return (T) extras.get(key);
+        return JSON.parseObject(JSON.toJSONString(extras.get(key)), typeRef.getType());
     }
 
     @SuppressWarnings("unchecked")
@@ -101,7 +105,7 @@ public class Request implements Serializable {
         if (extras == null) {
             return defaultValue;
         }
-        return extras.get(key) != null ? (T) extras.get(key) : defaultValue;
+        return extras.get(key) != null ? getExtra(key) : defaultValue;
     }
 
     public <T> Request putExtra(String key, T value) {

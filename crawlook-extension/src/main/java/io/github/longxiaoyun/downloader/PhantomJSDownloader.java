@@ -108,9 +108,10 @@ public class PhantomJSDownloader extends AbstractDownloader {
     }
 
     @Override
-    public void setThread(int threadNum) {
+    public void connectPoolSize(int poolSize) {
         // ignore
     }
+
 
     protected String getPage(Request request) throws Exception {
         String url = request.getUrl();

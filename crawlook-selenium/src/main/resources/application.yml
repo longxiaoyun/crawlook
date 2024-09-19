@@ -1,7 +1,7 @@
 browser:
   pool:
-    corePoolSize: 1
-    maxTotal: 20
+    corePoolSize: 3
+    maxTotal: 5
     maxIdle: 5
     minIdle: 1
     driver: chrome
